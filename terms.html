@@ -40,18 +40,25 @@
   .lang-sep { text-align: center; color: var(--muted); margin: 40px 0 28px; font-size: 0.9rem; letter-spacing: 0.08em; }
   .updated { display: inline-block; background: #FDF1EA; color: var(--accent); border-radius: 999px; padding: 4px 12px; font-size: 0.82rem; margin-bottom: 18px; }
   .notice { background: #FFF6EE; border-left: 3px solid var(--accent); padding: 12px 16px; border-radius: 8px; margin: 16px 0; }
+  .lang-switch { display: none; gap: 8px; justify-content: flex-end; margin-bottom: 18px; }
+  .lang-switch button { cursor: pointer; border: 1px solid var(--border); background: var(--card); color: var(--text); border-radius: 999px; padding: 6px 14px; font: inherit; font-size: 0.88rem; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <div class="card">
-    <span class="updated">Son güncelleme: 14 Ağustos 2026</span>
+  <div class="lang-switch" id="lang-switch">
+    <button type="button" data-lang="tr">Türkçe</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
+
+  <div class="card" id="lang-tr">
+    <span class="updated">Son güncelleme: 17 Ağustos 2026</span>
     <h1>CookifyAI Kullanım Koşulları</h1>
     <p class="muted">CookifyAI uygulamasını kullanarak aşağıdaki koşulları kabul etmiş olursunuz.</p>
 
     <h2>1. Hizmet</h2>
-    <p>CookifyAI, kullanıcıların yemek tarifleri keşfetmesine, kaydetmesine ve kendi tariflerini paylaşmasına olanak tanıyan ücretsiz bir mobil uygulamadır. Uygulama reklam gelirleriyle desteklenmektedir.</p>
+    <p>CookifyAI, kullanıcıların yemek tarifleri keşfetmesine, kaydetmesine, kendi tariflerini paylaşmasına ve yapay zekâ ile kendilerine özel tarifler oluşturmasına olanak tanıyan ücretsiz bir mobil uygulamadır. Uygulama reklam gelirleriyle desteklenmektedir.</p>
 
     <h2>2. Hesabınız</h2>
     <ul>
@@ -71,74 +78,3 @@
       <li>Başkalarının kişisel bilgilerini.</li>
     </ul>
     <p>Paylaşılan tarifler yayınlanmadan önce incelenir. Bu koşullara aykırı bulunan içerikleri yayınlamama veya kaldırma hakkımız saklıdır. Tekrarlayan ihlallerde hesabınız askıya alınabilir.</p>
-
-    <h2>4. Tarif ve Beslenme Bilgileri</h2>
-    <div class="notice">
-      <p style="margin:0"><strong>Önemli:</strong> Uygulamadaki tarifler, kalori değerleri ve malzeme bilgileri büyük ölçüde kullanıcılar tarafından girilir. Bu bilgilerin doğruluğunu garanti etmiyoruz. Uygulama tıbbi, beslenme veya sağlık tavsiyesi vermez. Gıda alerjiniz veya özel bir beslenme gereksiniminiz varsa malzemeleri kendiniz doğrulayın ve gerekirse bir sağlık uzmanına danışın.</p>
-    </div>
-    <p>"Kaçındığım malzemeler" özelliği, girdiğiniz kelimelerle tarif malzemelerini eşleştiren bir kolaylık aracıdır. Tüm eşleşmeleri yakalayacağı garanti edilemez ve alerji güvenliği için tek başına güvenilmemelidir.</p>
-
-    <h2>5. Reklamlar</h2>
-    <p>Uygulama Google AdMob üzerinden reklam gösterir. Reklam içeriklerinden ve reklam verenlerin uygulamalarından sorumlu değiliz.</p>
-
-    <h2>6. Sorumluluğun Sınırlandırılması</h2>
-    <p>Uygulama "olduğu gibi" sunulmaktadır. Kesintisiz veya hatasız çalışacağını taahhüt etmiyoruz. Yürürlükteki yasaların izin verdiği ölçüde, uygulamanın kullanımından doğan dolaylı zararlardan sorumlu değiliz.</p>
-
-    <h2>7. Değişiklikler ve Sona Erdirme</h2>
-    <p>Bu koşulları güncelleyebilir, hizmeti değiştirebilir veya sonlandırabiliriz. Bu koşulları ihlal eden hesapları askıya alma veya kapatma hakkımız saklıdır.</p>
-
-    <h2>8. İletişim</h2>
-    <p>Sorularınız için: <a href="mailto:ezerogluburak@gmail.com">ezerogluburak@gmail.com</a></p>
-  </div>
-
-  <div class="lang-sep">— ENGLISH —</div>
-
-  <div class="card">
-    <span class="updated">Last updated: 14 August 2026</span>
-    <h1>CookifyAI Terms of Service</h1>
-    <p class="muted">By using the CookifyAI app you agree to the terms below.</p>
-
-    <h2>1. The Service</h2>
-    <p>CookifyAI is a free mobile app that lets users discover, save and share cooking recipes. The app is supported by advertising revenue.</p>
-
-    <h2>2. Your Account</h2>
-    <ul>
-      <li>You must provide accurate information when creating an account.</li>
-      <li>You are responsible for your account security and keeping your password confidential.</li>
-      <li>You may not use the app if you are under 13.</li>
-      <li>You can delete your account at any time from within the app.</li>
-    </ul>
-
-    <h2>3. Content You Share</h2>
-    <p>Recipes, text and photos you submit remain yours. You grant us a worldwide, royalty-free, non-transferable licence to display them in the app, used solely to operate the service.</p>
-    <p>You may not submit:</p>
-    <ul>
-      <li>Copyrighted material belonging to someone else,</li>
-      <li>Unlawful, deceptive, hateful or obscene content,</li>
-      <li>Advertising, spam or irrelevant content,</li>
-      <li>Other people's personal information.</li>
-    </ul>
-    <p>Submitted recipes are reviewed before publication. We reserve the right to decline or remove content that breaches these terms. Repeated violations may result in account suspension.</p>
-
-    <h2>4. Recipe and Nutrition Information</h2>
-    <div class="notice">
-      <p style="margin:0"><strong>Important:</strong> Recipes, calorie values and ingredient lists are largely user-submitted. We do not guarantee their accuracy. The app does not provide medical, nutritional or health advice. If you have a food allergy or specific dietary requirement, verify ingredients yourself and consult a qualified professional where appropriate.</p>
-    </div>
-    <p>The "ingredients I avoid" feature is a convenience tool that matches the words you enter against recipe ingredients. It cannot be guaranteed to catch every match and must not be relied on alone for allergy safety.</p>
-
-    <h2>5. Advertising</h2>
-    <p>The app displays ads through Google AdMob. We are not responsible for advertisement content or advertisers' practices.</p>
-
-    <h2>6. Limitation of Liability</h2>
-    <p>The app is provided "as is". We do not warrant that it will be uninterrupted or error-free. To the extent permitted by applicable law, we are not liable for indirect damages arising from your use of the app.</p>
-
-    <h2>7. Changes and Termination</h2>
-    <p>We may update these terms, modify or discontinue the service. We reserve the right to suspend or close accounts that breach these terms.</p>
-
-    <h2>8. Contact</h2>
-    <p>Questions: <a href="mailto:ezerogluburak@gmail.com">ezerogluburak@gmail.com</a></p>
-  </div>
-
-</div>
-</body>
-</html>
