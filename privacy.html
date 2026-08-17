@@ -43,13 +43,20 @@
   th { color: var(--muted); font-weight: 600; }
   .lang-sep { text-align: center; color: var(--muted); margin: 40px 0 28px; font-size: 0.9rem; letter-spacing: 0.08em; }
   .updated { display: inline-block; background: #FDF1EA; color: var(--accent); border-radius: 999px; padding: 4px 12px; font-size: 0.82rem; margin-bottom: 18px; }
+  .lang-switch { display: none; gap: 8px; justify-content: flex-end; margin-bottom: 18px; }
+  .lang-switch button { cursor: pointer; border: 1px solid var(--border); background: var(--card); color: var(--text); border-radius: 999px; padding: 6px 14px; font: inherit; font-size: 0.88rem; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <div class="card">
-    <span class="updated">Son güncelleme: 14 Ağustos 2026</span>
+  <div class="lang-switch" id="lang-switch">
+    <button type="button" data-lang="tr">Türkçe</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
+
+  <div class="card" id="lang-tr">
+    <span class="updated">Son güncelleme: 17 Ağustos 2026</span>
     <h1>CookifyAI Gizlilik Politikası</h1>
     <p class="muted">Bu politika, CookifyAI mobil uygulamasını kullandığınızda hangi verilerin toplandığını, ne amaçla işlendiğini ve haklarınızı açıklar.</p>
 
@@ -63,6 +70,8 @@
       <tr><td>Kullanıcı adı ve avatar seçimi</td><td>Profilin görüntülenmesi</td><td>Kayıt olurken / profil düzenlerken</td></tr>
       <tr><td>Kaçındığınız malzemeler</td><td>İstemediğiniz malzemeleri içeren tariflerin gizlenmesi ve uyarı gösterilmesi</td><td>İsteğe bağlı, siz girerseniz</td></tr>
       <tr><td>Paylaştığınız tarifler ve fotoğrafları</td><td>Tariflerin yayınlanması</td><td>Tarif eklerken</td></tr>
+      <tr><td>AI'a yazdığınız tarif isteği</td><td>Yapay zekânın size tarif oluşturması</td><td>"AI ile oluştur" özelliğini kullanırken</td></tr>
+      <tr><td>Kaydettiğiniz AI tarifleri</td><td>Yalnızca sizin görebileceğiniz özel listede saklanması</td><td>Tarifi kaydederken</td></tr>
       <tr><td>Favorileriniz ve verdiğiniz puanlar</td><td>Uygulama işlevselliği</td><td>Kullanım sırasında</td></tr>
       <tr><td>Cihaz ve reklam tanımlayıcıları</td><td>Reklam gösterimi</td><td>Reklam yüklenirken</td></tr>
     </table>
@@ -76,13 +85,14 @@
     <ul>
       <li><strong>Supabase</strong> — hesap yönetimi, veritabanı ve dosya depolama.</li>
       <li><strong>Google AdMob</strong> — uygulama içi reklamlar. Reklam gösterimi için cihaz tanımlayıcıları işlenebilir. Ayrıntılar: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google gizlilik bildirimi</a>.</li>
+      <li><strong>Google Gemini API</strong> — "AI ile oluştur" özelliğini kullandığınızda yazdığınız istek ve varsa kaçındığınız malzemeler tarif üretmek amacıyla Google'a gönderilir. Bu istek hesabınıza bağlanabilecek bir kimlik bilgisi içermez. Google ücretsiz katmanda bu içerikleri ürünlerini geliştirmek için kullanabilir ve içerikler insan denetçiler tarafından incelenebilir; bu nedenle bu alana kişisel bilgi yazmayın. Ayrıntılar: <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API şartları</a>.</li>
       <li><strong>Google ile Giriş</strong> — bu yöntemi seçerseniz Google'dan ad ve e-posta bilginiz alınır.</li>
       <li><strong>Apple ile Giriş</strong> — bu yöntemi seçerseniz Apple'dan kimlik doğrulama bilginiz alınır. Apple'ın "E-postamı Gizle" özelliğini kullanırsanız gerçek e-posta adresinizi görmeyiz.</li>
     </ul>
-    <p>Verilerinizi satmıyoruz ve reklam ortakları dışında üçüncü taraflarla paylaşmıyoruz.</p>
+    <p>Verilerinizi satmıyoruz. Yukarıda sayılan hizmet sağlayıcıları dışında üçüncü taraflarla paylaşmıyoruz.</p>
 
     <h2>5. Verilerin Saklanması ve Silinmesi</h2>
-    <p>Verileriniz hesabınız var olduğu sürece saklanır. Hesabınızı uygulama içinden <em>Ayarlar → Hesabı Sil</em> yolundan kalıcı olarak silebilirsiniz. Silme işlemi hesabınızı, profil bilgilerinizi, favorilerinizi ve puanlarınızı kaldırır. Alternatif olarak <a href="mailto:ezerogluburak@gmail.com">ezerogluburak@gmail.com</a> adresine yazarak talep edebilirsiniz; talepler 30 gün içinde işleme alınır.</p>
+    <p>Verileriniz hesabınız var olduğu sürece saklanır. Hesabınızı uygulama içinden <em>Ayarlar → Hesabı Sil</em> yolundan kalıcı olarak silebilirsiniz. Silme işlemi hesabınızı, profil bilgilerinizi, favorilerinizi, puanlarınızı ve kaydettiğiniz AI tariflerini kaldırır. Alternatif olarak <a href="mailto:ezerogluburak@gmail.com">ezerogluburak@gmail.com</a> adresine yazarak talep edebilirsiniz; talepler 30 gün içinde işleme alınır.</p>
 
     <h2>6. Haklarınız</h2>
     <p>Bulunduğunuz ülkenin mevzuatına (KVKK, GDPR vb.) bağlı olarak verilerinize erişme, düzeltme, silme ve işlemeye itiraz etme haklarına sahipsiniz. Bu haklarınızı kullanmak için bize e-posta ile ulaşabilirsiniz.</p>
@@ -96,8 +106,8 @@
 
   <div class="lang-sep">— ENGLISH —</div>
 
-  <div class="card">
-    <span class="updated">Last updated: 14 August 2026</span>
+  <div class="card" id="lang-en">
+    <span class="updated">Last updated: 17 August 2026</span>
     <h1>CookifyAI Privacy Policy</h1>
     <p class="muted">This policy explains what data the CookifyAI mobile app collects, why it is processed, and what rights you have.</p>
 
@@ -111,6 +121,8 @@
       <tr><td>Username and avatar choice</td><td>Displaying your profile</td><td>At registration / profile edit</td></tr>
       <tr><td>Ingredients you avoid</td><td>Hiding and flagging recipes containing them</td><td>Optional, only if you enter them</td></tr>
       <tr><td>Recipes and photos you submit</td><td>Publishing your recipes</td><td>When adding a recipe</td></tr>
+      <tr><td>The recipe request you type for AI</td><td>Generating a recipe for you</td><td>When using "Create with AI"</td></tr>
+      <tr><td>AI recipes you save</td><td>Storing them in a private list only you can see</td><td>When you save a recipe</td></tr>
       <tr><td>Favourites and ratings</td><td>App functionality</td><td>During use</td></tr>
       <tr><td>Device and advertising identifiers</td><td>Serving ads</td><td>When ads load</td></tr>
     </table>
@@ -124,13 +136,14 @@
     <ul>
       <li><strong>Supabase</strong> — account management, database and file storage.</li>
       <li><strong>Google AdMob</strong> — in-app advertising. Device identifiers may be processed to serve ads. See <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google's privacy notice</a>.</li>
+      <li><strong>Google Gemini API</strong> — when you use "Create with AI", the request you type and your avoided ingredients (if any) are sent to Google in order to generate a recipe. The request carries no identifier linking it to your account. On the free tier Google may use this content to improve its products, and it may be reviewed by human reviewers, so please do not type personal information there. See the <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API terms</a>.</li>
       <li><strong>Sign in with Google</strong> — if you choose it, we receive your name and email from Google.</li>
       <li><strong>Sign in with Apple</strong> — if you choose it, we receive authentication details from Apple. If you use Apple's "Hide My Email", we never see your real address.</li>
     </ul>
-    <p>We do not sell your data and do not share it with third parties other than the advertising partner above.</p>
+    <p>We do not sell your data. We do not share it with third parties other than the service providers listed above.</p>
 
     <h2>5. Retention and Deletion</h2>
-    <p>Your data is kept for as long as your account exists. You can permanently delete your account in the app via <em>Settings → Delete Account</em>. Deletion removes your account, profile details, favourites and ratings. Alternatively, email <a href="mailto:ezerogluburak@gmail.com">ezerogluburak@gmail.com</a>; requests are handled within 30 days.</p>
+    <p>Your data is kept for as long as your account exists. You can permanently delete your account in the app via <em>Settings → Delete Account</em>. Deletion removes your account, profile details, favourites, ratings and the AI recipes you saved. Alternatively, email <a href="mailto:ezerogluburak@gmail.com">ezerogluburak@gmail.com</a>; requests are handled within 30 days.</p>
 
     <h2>6. Your Rights</h2>
     <p>Depending on your jurisdiction (GDPR, KVKK and similar), you have the right to access, correct, delete and object to the processing of your data. Contact us by email to exercise these rights.</p>
@@ -143,5 +156,35 @@
   </div>
 
 </div>
+<script>
+(function () {
+  var tr = document.getElementById('lang-tr');
+  var en = document.getElementById('lang-en');
+  var sep = document.querySelector('.lang-sep');
+  var sw = document.getElementById('lang-switch');
+  if (!tr || !en || !sw) return;
+
+  var buttons = sw.querySelectorAll('[data-lang]');
+
+  function apply(lang) {
+    tr.style.display = lang === 'tr' ? '' : 'none';
+    en.style.display = lang === 'en' ? '' : 'none';
+    if (sep) sep.style.display = 'none';
+    document.documentElement.lang = lang;
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].style.opacity = buttons[i].getAttribute('data-lang') === lang ? '1' : '0.45';
+    }
+  }
+
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function () {
+      apply(this.getAttribute('data-lang'));
+    });
+  }
+
+  sw.style.display = 'flex';
+  apply((navigator.language || 'en').toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en');
+})();
+</script>
 </body>
 </html>
