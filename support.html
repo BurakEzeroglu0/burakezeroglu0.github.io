@@ -1,88 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CookifyAI - Support</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CookifyAI - Destek / Support</title>
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 40px; max-width: 700px; margin: 0 auto; color: #333; }
-h1 { color: #1a1a1a; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-h3 { color: #2c3e50; margin-top: 25px; }
-ul { padding-left: 20px; }
-.lang-section { display: none; }
-a { color: #c0562f; }
+  :root {
+    --bg: #FFFBF5;
+    --card: #FFFFFF;
+    --text: #3A2A20;
+    --muted: #7A6A60;
+    --accent: #E8734A;
+    --border: #EFE3D8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 16px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 26px;
+    margin-bottom: 28px;
+  }
+  h1 { font-size: 1.7rem; margin: 0 0 6px; }
+  h2 { font-size: 1.15rem; margin: 28px 0 8px; color: var(--accent); }
+  h3 { font-size: 1rem; margin: 18px 0 6px; }
+  p, li { color: var(--text); }
+  .muted { color: var(--muted); font-size: 0.92rem; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  .lang-sep { text-align: center; color: var(--muted); margin: 40px 0 28px; font-size: 0.9rem; letter-spacing: 0.08em; }
+  .updated { display: inline-block; background: #FDF1EA; color: var(--accent); border-radius: 999px; padding: 4px 12px; font-size: 0.82rem; margin-bottom: 18px; }
+  .lang-switch { display: none; gap: 8px; justify-content: flex-end; margin-bottom: 18px; }
+  .lang-switch button { cursor: pointer; border: 1px solid var(--border); background: var(--card); color: var(--text); border-radius: 999px; padding: 6px 14px; font: inherit; font-size: 0.88rem; }
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<div id="en" class="lang-section" style="display:block">
-  <h1>CookifyAI - Support</h1>
-  <p>Need help with CookifyAI? Email us at <a href="mailto:ezerogluburak@gmail.com">ezerogluburak@gmail.com</a>. We usually reply within 2 business days.</p>
+  <div class="lang-switch" id="lang-switch">
+    <button type="button" data-lang="tr">Türkçe</button>
+    <button type="button" data-lang="en">English</button>
+  </div>
 
-  <h3>Frequently asked questions</h3>
+  <div class="card" id="lang-tr">
+    <span class="updated">ezerogluburak@gmail.com</span>
+    <h1>CookifyAI Destek</h1>
+    <p class="muted">CookifyAI ile ilgili yardıma mı ihtiyacınız var? <a href="mailto:ezerogluburak@gmail.com">ezerogluburak@gmail.com</a> adresine e-posta gönderin. Genellikle 2 iş günü içinde yanıt veriyoruz.</p>
 
-  <p><strong>How many AI recipes can I generate per day?</strong><br>
-  Free accounts get five AI generations a day. When you run out you can watch a short video to earn one extra generation, up to three extra per day. The counter resets every day.</p>
+    <h2>Sık sorulan sorular</h2>
 
-  <p><strong>I watched a video but did not get an extra recipe.</strong><br>
-  The reward is granted when the video finishes. If you closed it early, no generation is added. If the offer says an ad is not available, no ad could be loaded at that moment - try again in a few minutes.</p>
+    <h3>Günde kaç yapay zeka tarifi oluşturabilirim?</h3>
+    <p>Ücretsiz hesaplar günde beş yapay zeka üretimi hakkına sahiptir. Hakkınız bittiğinde kısa bir video izleyerek bir üretim daha kazanabilirsiniz, günde en fazla üç ek hak. Sayaç her gün sıfırlanır.</p>
 
-  <p><strong>The AI recipe looks wrong.</strong><br>
-  AI recipes are suggestions, not tested instructions. Always check ingredients, cooking times and temperatures yourself, and take extra care with allergies, raw meat and eggs.</p>
+    <h3>Video izledim ama ek tarif hakkı gelmedi.</h3>
+    <p>Ödül, video tamamlandığında verilir. Videoyu erken kapattıysanız hak eklenmez. Teklif "reklam hazır değil" diyorsa o anda reklam yüklenememiştir, birkaç dakika sonra tekrar deneyin.</p>
 
-  <p><strong>How do I stop seeing an ingredient I do not eat?</strong><br>
-  Open Settings and add it to Avoided Ingredients. CookifyAI will keep it out of your AI suggestions.</p>
+    <h3>Yapay zeka tarifi hatalı görünüyor.</h3>
+    <p>Yapay zeka tarifleri birer öneridir, test edilmiş talimatlar değildir. Malzemeleri, pişirme sürelerini ve sıcaklıkları her zaman kendiniz kontrol edin; alerjiler, çiğ et ve yumurta konusunda ayrıca dikkatli olun.</p>
 
-  <p><strong>How do I report a recipe or a user?</strong><br>
-  Email <a href="mailto:ezerogluburak@gmail.com">ezerogluburak@gmail.com</a> with a link to or the name of the recipe. We review reports within 24 hours and remove content that breaks our terms.</p>
+    <h3>Yemediğim bir malzemeyi önerilerden nasıl çıkarırım?</h3>
+    <p>Ayarlar bölümünü açıp Kaçınılan Malzemeler listesine ekleyin. CookifyAI o malzemeyi yapay zeka önerilerinizden uzak tutar.</p>
 
-  <p><strong>How do I delete my account?</strong><br>
-  In the app, go to Settings and choose Delete Account. Full details are on our <a href="https://burakezeroglu0.github.io/">account deletion page</a>.</p>
+    <h3>Bir tarifi veya kullanıcıyı nasıl şikayet ederim?</h3>
+    <p>Tarifin adını veya bağlantısını belirterek <a href="mailto:ezerogluburak@gmail.com">ezerogluburak@gmail.com</a> adresine yazın. Şikayetleri 24 saat içinde inceliyor, şartlarımızı ihlal eden içerikleri kaldırıyoruz.</p>
 
-  <h3>Legal</h3>
-  <ul>
-    <li><a href="https://burakezeroglu0.github.io/privacy.html">Privacy policy</a></li>
-    <li><a href="https://burakezeroglu0.github.io/terms.html">Terms of service</a></li>
-  </ul>
-</div>
+    <h3>Hesabımı nasıl silerim?</h3>
+    <p>Uygulamada Ayarlar bölümünden Hesabımı Sil seçeneğini kullanın. Ayrıntılar <a href="./index.html">hesap silme sayfamızda</a>.</p>
 
-<div id="tr" class="lang-section">
-  <h1>CookifyAI - Destek</h1>
-  <p>CookifyAI ile ilgili yardıma mı ihtiyacınız var? <a href="mailto:ezerogluburak@gmail.com">ezerogluburak@gmail.com</a> adresine e-posta gönderin. Genellikle 2 iş günü içinde yanıt veriyoruz.</p>
+    <h2>Yasal</h2>
+    <ul>
+      <li><a href="./privacy.html">Gizlilik politikası</a></li>
+      <li><a href="./terms.html">Kullanım şartları</a></li>
+      <li><a href="./index.html">Hesap ve veri silme</a></li>
+    </ul>
+  </div>
 
-  <h3>Sık sorulan sorular</h3>
+  <div class="lang-sep">— ENGLISH —</div>
 
-  <p><strong>Günde kaç yapay zeka tarifi oluşturabilirim?</strong><br>
-  Ücretsiz hesaplar günde beş yapay zeka üretimi hakkına sahiptir. Hakkınız bittiğinde kısa bir video izleyerek bir üretim daha kazanabilirsiniz, günde en fazla üç ek hak. Sayaç her gün sıfırlanır.</p>
+  <div class="card" id="lang-en">
+    <span class="updated">ezerogluburak@gmail.com</span>
+    <h1>CookifyAI Support</h1>
+    <p class="muted">Need help with CookifyAI? Email us at <a href="mailto:ezerogluburak@gmail.com">ezerogluburak@gmail.com</a>. We usually reply within 2 business days.</p>
 
-  <p><strong>Video izledim ama ek tarif hakkı gelmedi.</strong><br>
-  Ödül, video tamamlandığında verilir. Videoyu erken kapattıysanız hak eklenmez. Teklif "reklam hazır değil" diyorsa o anda reklam yüklenememiştir, birkaç dakika sonra tekrar deneyin.</p>
+    <h2>Frequently asked questions</h2>
 
-  <p><strong>Yapay zeka tarifi hatalı görünüyor.</strong><br>
-  Yapay zeka tarifleri birer öneridir, test edilmiş talimatlar değildir. Malzemeleri, pişirme sürelerini ve sıcaklıkları her zaman kendiniz kontrol edin; alerjiler, çiğ et ve yumurta konusunda ayrıca dikkatli olun.</p>
+    <h3>How many AI recipes can I generate per day?</h3>
+    <p>Free accounts get five AI generations a day. When you run out you can watch a short video to earn one extra generation, up to three extra per day. The counter resets every day.</p>
 
-  <p><strong>Yemediğim bir malzemeyi önerilerden nasıl çıkarırım?</strong><br>
-  Ayarlar bölümünü açıp Kaçınılan Malzemeler listesine ekleyin. CookifyAI o malzemeyi yapay zeka önerilerinizden uzak tutar.</p>
+    <h3>I watched a video but did not get an extra recipe.</h3>
+    <p>The reward is granted when the video finishes. If you closed it early, no generation is added. If the offer says an ad is not available, no ad could be loaded at that moment — try again in a few minutes.</p>
 
-  <p><strong>Bir tarifi veya kullanıcıyı nasıl şikayet ederim?</strong><br>
-  Tarifin adını veya bağlantısını belirterek <a href="mailto:ezerogluburak@gmail.com">ezerogluburak@gmail.com</a> adresine yazın. Şikayetleri 24 saat içinde inceliyor, şartlarımızı ihlal eden içerikleri kaldırıyoruz.</p>
+    <h3>The AI recipe looks wrong.</h3>
+    <p>AI recipes are suggestions, not tested instructions. Always check ingredients, cooking times and temperatures yourself, and take extra care with allergies, raw meat and eggs.</p>
 
-  <p><strong>Hesabımı nasıl silerim?</strong><br>
-  Uygulamada Ayarlar bölümünden Hesabımı Sil seçeneğini kullanın. Ayrıntılar <a href="https://burakezeroglu0.github.io/">hesap silme sayfamızda</a>.</p>
+    <h3>How do I stop seeing an ingredient I do not eat?</h3>
+    <p>Open Settings and add it to Avoided Ingredients. CookifyAI will keep it out of your AI suggestions.</p>
 
-  <h3>Yasal</h3>
-  <ul>
-    <li><a href="https://burakezeroglu0.github.io/privacy.html">Gizlilik politikası</a></li>
-    <li><a href="https://burakezeroglu0.github.io/terms.html">Kullanım şartları</a></li>
-  </ul>
+    <h3>How do I report a recipe or a user?</h3>
+    <p>Email <a href="mailto:ezerogluburak@gmail.com">ezerogluburak@gmail.com</a> with a link to or the name of the recipe. We review reports within 24 hours and remove content that breaks our terms.</p>
+
+    <h3>How do I delete my account?</h3>
+    <p>In the app, go to Settings and choose Delete Account. Full details are on our <a href="./index.html">account deletion page</a>.</p>
+
+    <h2>Legal</h2>
+    <ul>
+      <li><a href="./privacy.html">Privacy policy</a></li>
+      <li><a href="./terms.html">Terms of service</a></li>
+      <li><a href="./index.html">Account and data deletion</a></li>
+    </ul>
+  </div>
+
 </div>
 
 <script>
-const userLang = navigator.language || navigator.userLanguage;
-if (userLang.startsWith('tr')) {
-  document.getElementById('en').style.display = 'none';
-  document.getElementById('tr').style.display = 'block';
-}
+(function () {
+  var tr = document.getElementById('lang-tr');
+  var en = document.getElementById('lang-en');
+  var sep = document.querySelector('.lang-sep');
+  var sw = document.getElementById('lang-switch');
+  if (!tr || !en || !sw) return;
+
+  var buttons = sw.querySelectorAll('[data-lang]');
+
+  function apply(lang) {
+    tr.style.display = lang === 'tr' ? '' : 'none';
+    en.style.display = lang === 'en' ? '' : 'none';
+    if (sep) sep.style.display = 'none';
+    document.documentElement.lang = lang;
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].style.opacity = buttons[i].getAttribute('data-lang') === lang ? '1' : '0.45';
+    }
+  }
+
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function () {
+      apply(this.getAttribute('data-lang'));
+    });
+  }
+
+  sw.style.display = 'flex';
+  apply((navigator.language || 'en').toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en');
+})();
 </script>
 
 </body>
