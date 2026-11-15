@@ -23,7 +23,7 @@
 <p class="lang"><a href="#tr">Türkçe</a> &nbsp;·&nbsp; <a href="#en">English</a> &nbsp;·&nbsp; <a href="#de">Deutsch</a></p>
 
 <h1 id="tr">Parla — Gizlilik Politikası</h1>
-<p class="updated">Son güncelleme: 22 Ekim 2026</p>
+<p class="updated">Son güncelleme: 15 Kasım 2026</p>
 
 <p>Parla, Burak Ezeroğlu tarafından geliştirilen bir dil öğrenme uygulamasıdır.
 Bir cümle söyler ya da yazarsınız, Parla onu öğrendiğiniz dile çevirir ve
@@ -39,7 +39,8 @@ topladığını, neden topladığını ve bunları nasıl silebileceğinizi anla
   <tr><td>Kaydettiğiniz cümleler ve görselleri</td><td>"Cümlelerim" listesini oluşturmak</td><td>Bir cümleyi kaydettiğinizde</td></tr>
   <tr><td>E-posta adresi ve görünen ad</td><td>Hesabınızı tanımlamak ve kayıtlı cümlelerinizi cihazlar arasında eşitlemek</td><td>Kayıt olduğunuzda veya giriş yaptığınızda</td></tr>
   <tr><td>Dil tercihleri ve ayarlar</td><td>Seçtiğiniz dilleri ve temayı hatırlamak</td><td>Ayarları değiştirdiğinizde</td></tr>
-  <tr><td>Kullanım olayları (çeviri yapıldı, pratik tamamlandı, reklam gösterildi gibi)</td><td>Uygulamanın hangi kısımlarının işe yaradığını anlamak</td><td>İlgili eylemi yaptığınızda</td></tr>
+  <tr><td>Kullanım ve performans olayları (çeviri yapıldı, pratik tamamlandı, seri uzadı, reklam gösterildi, açılış ve çeviri süreleri gibi)</td><td>Uygulamanın hangi kısımlarının işe yaradığını ve ne kadar hızlı çalıştığını anlamak</td><td>İlgili eylemi yaptığınızda; aşağıdaki onay kuralına bağlı</td></tr>
+  <tr><td>Geri bildirim mesajları ve uygulama sürümü, platform (Android/iOS), uygulama dili</td><td>Uygulamayı iyileştirmek</td><td>Yalnızca menüden geri bildirim gönderdiğinizde; hesabınızla ilişkilendirilmez</td></tr>
   <tr><td>Çökme ve hata raporları</td><td>Hataları bulup düzeltmek</td><td>Uygulama beklenmedik şekilde kapanırsa</td></tr>
   <tr><td>Reklam kimliği</td><td>Reklam göstermek</td><td>Reklam yüklenirken</td></tr>
   <tr><td>Abonelik durumu</td><td>Premium özellikleri açmak</td><td>Abonelik satın aldığınızda</td></tr>
@@ -48,6 +49,14 @@ topladığını, neden topladığını ve bunları nasıl silebileceğinizi anla
 <p><strong>Toplanmayan veriler:</strong> ad soyad (görünen ad dışında), adres,
 telefon numarası, konum, rehber, fotoğraflar ve ödeme bilgileri. Ödemeler
 Google Play veya App Store tarafından işlenir; kart bilgileriniz bize ulaşmaz.</p>
+
+<p><strong>Yalnızca cihazınızda kalanlar:</strong> günlük pratik seriniz, günün
+pratik sayısı ve ayarlarınız cihazınızda tutulur, sunucuya gönderilmez.</p>
+
+<p><strong>Geri bildirim:</strong> Menüden gönderdiğiniz mesaj, uygulama sürümü,
+platform ve uygulama diliyle birlikte Google Firebase'de saklanır. Mesaja hesap
+kimliğiniz ya da e-posta adresiniz eklenmez; bu yüzden mesajlara yanıt
+veremeyiz. Mesajınıza kişisel bilgi yazmamanızı öneririz.</p>
 
 <h2>2. Konuşma tanıma ve seslendirme</h2>
 
@@ -93,12 +102,19 @@ cihazlara eşitlenir.</p>
 <h2>5. Reklamlar</h2>
 
 <p>Ücretsiz sürüm Google AdMob üzerinden reklam gösterir: aralıklarla tam
-ekran reklam ve isteğe bağlı olarak izlediğinizde ek hak veren ödüllü
-reklamlar. Premium abonelikte reklam gösterilmez.</p>
+ekran reklam ve isteğe bağlı olarak izlediğinizde ek çeviri hakkı veren ya da
+günlük serinizi koruyan ödüllü reklamlar. Premium abonelikte reklam
+gösterilmez.</p>
 
 <p>Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre'deki kullanıcılara,
 kişiselleştirilmiş reklam gösterilmeden önce bir onay ekranı sunulur.
-Seçiminizi cihaz ayarlarından değiştirebilirsiniz. Google'ın reklam verilerini
+Seçiminizi istediğiniz zaman uygulamada <strong>Menü → Reklam
+Gizliliği</strong> bölümünden değiştirebilirsiniz.</p>
+
+<p><strong>Ölçüm ve onay:</strong> Bu bölgelerde kullanım istatistikleri ve çökme
+raporları da yalnızca onay ekranında ilgili amaçlara izin verdiyseniz
+toplanır; izin vermezseniz hiçbiri gönderilmez. Diğer bölgelerde varsayılan
+olarak toplanır. Google'ın reklam verilerini
 nasıl kullandığını
 <a href="https://policies.google.com/technologies/partner-sites">buradan</a>
 okuyabilirsiniz.</p>
@@ -114,9 +130,10 @@ aktif olup olmadığı bilgisini alır.</p>
 
 <ul>
   <li><strong>Firebase Authentication</strong> — giriş ve hesap yönetimi</li>
-  <li><strong>Cloud Firestore</strong> — kayıtlı cümlelerin bulut eşitlemesi</li>
-  <li><strong>Firebase Analytics</strong> — anonim kullanım istatistikleri</li>
-  <li><strong>Firebase Crashlytics</strong> — çökme raporları</li>
+  <li><strong>Cloud Firestore</strong> — kayıtlı cümlelerin bulut eşitlemesi ve geri bildirim mesajları</li>
+  <li><strong>Firebase Analytics</strong> — kullanım ve performans istatistikleri; giriş yaptıysanız hesap kimliğinizle ilişkilendirilir</li>
+  <li><strong>Firebase Crashlytics</strong> — çökme raporları; giriş yaptıysanız hesap kimliğinizle ilişkilendirilir</li>
+  <li><strong>Firebase Remote Config</strong> — uygulama ayarlarının (örneğin reklam sıklığı, günlük hedef) uzaktan güncellenmesi; yalnızca ölçüme onay verildiyse</li>
   <li><strong>Google AdMob</strong> — reklam</li>
   <li><strong>Google Translate</strong> — çeviri (ücretsiz katman)</li>
   <li><strong>Google Gemini</strong> — yapay zekâ çevirisi (premium)</li>
@@ -142,6 +159,10 @@ yokken kayıtlı cümlelerinizi görüntüleyebilir ve pratik yapabilirsiniz.</p
 <p>Verileriniz hesabınız var olduğu sürece saklanır. Hesabınızı sildiğinizde
 hesabınız ve buluttaki kayıtlı cümleleriniz kalıcı olarak silinir. Bu işlem
 geri alınamaz.</p>
+
+<p>Geri bildirim mesajları hesabınızla ilişkilendirilmediği için hesap silme
+işlemiyle silinmez. Bir mesajın silinmesini istiyorsanız gönderdiğiniz tarihi
+ve mesajın içeriğini aşağıdaki adrese yazmanız yeterlidir.</p>
 
 <p>Hesabınızı uygulamanın içinden silebilirsiniz:
 <strong>Sağ üstteki avatar → Hesabı sil</strong>.
@@ -171,7 +192,7 @@ da aşağıdaki adresten talep edebilirsiniz.</p>
 <hr>
 
 <h1 id="en">Parla — Privacy Policy</h1>
-<p class="updated">Last updated: 22 October 2026</p>
+<p class="updated">Last updated: 15 November 2026</p>
 
 <p>Parla is a language-learning app developed by Burak Ezeroğlu. You say or
 type a sentence, Parla translates it into the language you are learning, and
@@ -187,7 +208,8 @@ collects, why, and how you can delete it.</p>
   <tr><td>Saved sentences and their pictures</td><td>To build your "Sentences" list</td><td>When you save a sentence</td></tr>
   <tr><td>Email address and display name</td><td>To identify your account and sync saved sentences across devices</td><td>When you register or sign in</td></tr>
   <tr><td>Language preferences and settings</td><td>To remember your languages and theme</td><td>When you change settings</td></tr>
-  <tr><td>Usage events (translation made, practice completed, ad shown)</td><td>To understand which parts of the app work</td><td>When you perform the action</td></tr>
+  <tr><td>Usage and performance events (translation made, practice completed, streak extended, ad shown, start-up and translation times)</td><td>To understand which parts of the app work and how fast it runs</td><td>When you perform the action; subject to the consent rule below</td></tr>
+  <tr><td>Feedback messages with app version, platform (Android/iOS) and app language</td><td>To improve the app</td><td>Only when you send feedback from the menu; not linked to your account</td></tr>
   <tr><td>Crash and error reports</td><td>To find and fix bugs</td><td>If the app closes unexpectedly</td></tr>
   <tr><td>Advertising identifier</td><td>To show ads</td><td>When an ad loads</td></tr>
   <tr><td>Subscription status</td><td>To unlock Premium features</td><td>When you buy a subscription</td></tr>
@@ -197,6 +219,15 @@ collects, why, and how you can delete it.</p>
 you choose), address, phone number, location, contacts, photos or payment
 details. Payments are processed by Google Play or the App Store; your card
 details never reach us.</p>
+
+<p><strong>Kept only on your device:</strong> your daily practice streak, the
+day's practice count and your settings stay on your device and are not sent to
+a server.</p>
+
+<p><strong>Feedback:</strong> A message you send from the menu is stored on
+Google Firebase together with the app version, platform and app language. Your
+account ID and email address are not attached, so we cannot reply to these
+messages. Please do not include personal information in your message.</p>
 
 <h2>2. Speech recognition and text-to-speech</h2>
 
@@ -242,12 +273,17 @@ with the same account.</p>
 <h2>5. Advertising</h2>
 
 <p>The free version shows ads through Google AdMob: occasional full-screen
-ads, and optional rewarded ads that grant extra uses when watched. Premium
-subscribers see no ads.</p>
+ads, and optional rewarded ads that grant extra translations or keep your daily
+streak when watched. Premium subscribers see no ads.</p>
 
 <p>Users in the European Economic Area, the United Kingdom and Switzerland are
 shown a consent screen before any personalised advertising. You can change
-your choice from your device settings. You can read how Google uses
+your choice at any time in the app under <strong>Menu → Ad Privacy</strong>.</p>
+
+<p><strong>Analytics and consent:</strong> In these regions, usage statistics and
+crash reports are also collected only if you allowed the relevant purposes on
+the consent screen; if you do not, none are sent. In other regions they are
+collected by default. You can read how Google uses
 advertising data
 <a href="https://policies.google.com/technologies/partner-sites">here</a>.</p>
 
@@ -262,9 +298,10 @@ whether the subscription is active.</p>
 
 <ul>
   <li><strong>Firebase Authentication</strong> — sign-in and account management</li>
-  <li><strong>Cloud Firestore</strong> — cloud sync of saved sentences</li>
-  <li><strong>Firebase Analytics</strong> — anonymous usage statistics</li>
-  <li><strong>Firebase Crashlytics</strong> — crash reports</li>
+  <li><strong>Cloud Firestore</strong> — cloud sync of saved sentences and feedback messages</li>
+  <li><strong>Firebase Analytics</strong> — usage and performance statistics; linked to your account ID if you are signed in</li>
+  <li><strong>Firebase Crashlytics</strong> — crash reports; linked to your account ID if you are signed in</li>
+  <li><strong>Firebase Remote Config</strong> — updating app settings remotely (such as ad frequency or the daily goal); only if you consented to analytics</li>
   <li><strong>Google AdMob</strong> — advertising</li>
   <li><strong>Google Translate</strong> — translation (free tier)</li>
   <li><strong>Google Gemini</strong> — AI translation (Premium)</li>
@@ -290,6 +327,10 @@ Without a connection you can still view and practise your saved sentences.</p>
 <p>Your data is kept for as long as your account exists. When you delete your
 account, your account and your saved sentences in the cloud are permanently
 removed. This cannot be undone.</p>
+
+<p>Feedback messages are not linked to your account, so deleting your account
+does not delete them. To have a message removed, email us the date you sent it
+and its content.</p>
 
 <p>You can delete your account from inside the app:
 <strong>Avatar (top right) → Delete account</strong>.
@@ -319,7 +360,7 @@ changed.</p>
 <hr>
 
 <h1 id="de">Parla — Datenschutzerklärung</h1>
-<p class="updated">Zuletzt aktualisiert: 22. Oktober 2026</p>
+<p class="updated">Zuletzt aktualisiert: 15. November 2026</p>
 
 <p>Parla ist eine Sprachlern-App von Burak Ezeroğlu. Sie sprechen oder tippen
 einen Satz, Parla übersetzt ihn in die Sprache, die Sie lernen, und Sie üben,
@@ -335,7 +376,8 @@ warum, und wie Sie sie löschen können.</p>
   <tr><td>Gespeicherte Sätze und ihre Bilder</td><td>Um Ihre Liste „Sätze" anzulegen</td><td>Wenn Sie einen Satz speichern</td></tr>
   <tr><td>E-Mail-Adresse und Anzeigename</td><td>Um Ihr Konto zu erkennen und gespeicherte Sätze zwischen Geräten zu synchronisieren</td><td>Bei Registrierung oder Anmeldung</td></tr>
   <tr><td>Spracheinstellungen und Einstellungen</td><td>Um sich Ihre Sprachen und Ihr Design zu merken</td><td>Wenn Sie Einstellungen ändern</td></tr>
-  <tr><td>Nutzungsereignisse (Übersetzung erstellt, Übung abgeschlossen, Werbung angezeigt)</td><td>Um zu verstehen, welche Teile der App funktionieren</td><td>Wenn Sie die Aktion ausführen</td></tr>
+  <tr><td>Nutzungs- und Leistungsereignisse (Übersetzung erstellt, Übung abgeschlossen, Serie verlängert, Werbung angezeigt, Start- und Übersetzungszeiten)</td><td>Um zu verstehen, welche Teile der App funktionieren und wie schnell sie läuft</td><td>Wenn Sie die Aktion ausführen; abhängig von der unten beschriebenen Einwilligung</td></tr>
+  <tr><td>Feedback-Nachrichten mit App-Version, Plattform (Android/iOS) und App-Sprache</td><td>Um die App zu verbessern</td><td>Nur wenn Sie über das Menü Feedback senden; nicht mit Ihrem Konto verknüpft</td></tr>
   <tr><td>Absturz- und Fehlerberichte</td><td>Um Fehler zu finden und zu beheben</td><td>Wenn die App unerwartet beendet wird</td></tr>
   <tr><td>Werbe-ID</td><td>Um Werbung anzuzeigen</td><td>Wenn eine Anzeige geladen wird</td></tr>
   <tr><td>Abostatus</td><td>Um Premium-Funktionen freizuschalten</td><td>Wenn Sie ein Abo abschließen</td></tr>
@@ -345,6 +387,16 @@ warum, und wie Sie sie löschen können.</p>
 einem selbst gewählten Anzeigenamen), Ihre Adresse, Telefonnummer, Ihren
 Standort, Ihre Kontakte, Fotos oder Zahlungsdaten. Zahlungen werden von Google
 Play oder dem App Store abgewickelt; Ihre Kartendaten erreichen uns nie.</p>
+
+<p><strong>Nur auf Ihrem Gerät:</strong> Ihre tägliche Übungsserie, die Zahl der
+Übungen des Tages und Ihre Einstellungen bleiben auf Ihrem Gerät und werden an
+keinen Server gesendet.</p>
+
+<p><strong>Feedback:</strong> Eine Nachricht, die Sie über das Menü senden, wird
+zusammen mit App-Version, Plattform und App-Sprache in Google Firebase
+gespeichert. Ihre Konto-ID und E-Mail-Adresse werden nicht angehängt, daher
+können wir auf diese Nachrichten nicht antworten. Bitte schreiben Sie keine
+persönlichen Daten in Ihre Nachricht.</p>
 
 <h2>2. Spracherkennung und Sprachausgabe</h2>
 
@@ -394,11 +446,18 @@ Geräten synchronisiert, auf denen Sie sich mit demselben Konto anmelden.</p>
 
 <p>Die kostenlose Version zeigt Werbung über Google AdMob: gelegentliche
 Vollbildanzeigen sowie optionale Anzeigen mit Belohnung, die beim Ansehen
-zusätzliche Nutzungen freischalten. Premium-Abonnenten sehen keine Werbung.</p>
+zusätzliche Übersetzungen freischalten oder Ihre tägliche Serie erhalten.
+Premium-Abonnenten sehen keine Werbung.</p>
 
 <p>Nutzern im Europäischen Wirtschaftsraum, im Vereinigten Königreich und in
 der Schweiz wird vor personalisierter Werbung ein Einwilligungsdialog
-angezeigt. Sie können Ihre Auswahl in den Einstellungen Ihres Geräts ändern.
+angezeigt. Sie können Ihre Auswahl jederzeit in der App unter
+<strong>Menü → Werbe-Datenschutz</strong> ändern.</p>
+
+<p><strong>Analyse und Einwilligung:</strong> In diesen Regionen werden auch
+Nutzungsstatistiken und Absturzberichte nur erhoben, wenn Sie den
+entsprechenden Zwecken im Einwilligungsdialog zugestimmt haben; andernfalls
+wird nichts gesendet. In anderen Regionen werden sie standardmäßig erhoben.
 Wie Google Werbedaten verwendet, können Sie
 <a href="https://policies.google.com/technologies/partner-sites">hier</a>
 nachlesen.</p>
@@ -414,9 +473,10 @@ das Abo aktiv ist.</p>
 
 <ul>
   <li><strong>Firebase Authentication</strong> — Anmeldung und Kontoverwaltung</li>
-  <li><strong>Cloud Firestore</strong> — Cloud-Synchronisierung gespeicherter Sätze</li>
-  <li><strong>Firebase Analytics</strong> — anonyme Nutzungsstatistiken</li>
-  <li><strong>Firebase Crashlytics</strong> — Absturzberichte</li>
+  <li><strong>Cloud Firestore</strong> — Cloud-Synchronisierung gespeicherter Sätze und Feedback-Nachrichten</li>
+  <li><strong>Firebase Analytics</strong> — Nutzungs- und Leistungsstatistiken; bei Anmeldung mit Ihrer Konto-ID verknüpft</li>
+  <li><strong>Firebase Crashlytics</strong> — Absturzberichte; bei Anmeldung mit Ihrer Konto-ID verknüpft</li>
+  <li><strong>Firebase Remote Config</strong> — Aktualisierung von App-Einstellungen aus der Ferne (z. B. Werbehäufigkeit, Tagesziel); nur mit Einwilligung zur Analyse</li>
   <li><strong>Google AdMob</strong> — Werbung</li>
   <li><strong>Google Translate</strong> — Übersetzung (kostenlose Stufe)</li>
   <li><strong>Google Gemini</strong> — KI-Übersetzung (Premium)</li>
@@ -443,6 +503,10 @@ ansehen und üben.</p>
 <p>Ihre Daten werden gespeichert, solange Ihr Konto besteht. Wenn Sie Ihr Konto
 löschen, werden Ihr Konto und Ihre gespeicherten Sätze in der Cloud dauerhaft
 entfernt. Dies kann nicht rückgängig gemacht werden.</p>
+
+<p>Feedback-Nachrichten sind nicht mit Ihrem Konto verknüpft und werden daher
+beim Löschen des Kontos nicht gelöscht. Wenn eine Nachricht entfernt werden
+soll, schreiben Sie uns das Sendedatum und den Inhalt.</p>
 
 <p>Sie können Ihr Konto in der App löschen:
 <strong>Avatar (oben rechts) → Konto löschen</strong>.
